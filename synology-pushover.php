@@ -1,5 +1,5 @@
 <?php
-/* This script makes it possible to send pushover messages from a Synology NAS
+/* This script makes it possible to send Pushover notifications from a Synology NAS
 Requirements:
    - A Synology NAS
    - In Web Station, create a new Virtual Host, on port 88 (at least the same one you specified above),
@@ -17,7 +17,7 @@ Requirements:
 /********** CONFING START ***********/
 
 // Only allow request made by localhost?
-// Set this to false if this script is not running on your synology webserver (less secure)
+// Set this to false if this script is not running on your Synology Web Server (less secure)
 $localOnly = false;
 
 /********** CONFING END *************/
@@ -26,7 +26,7 @@ echo time();
 // Validate httpHost and/or remote addr?
 if ($localOnly) {
   if ($_SERVER['HTTP_HOST'] != 'localhost') {
-    echo 'Not locahost';
+    echo 'Not localhost';
     die;
   }
 }
